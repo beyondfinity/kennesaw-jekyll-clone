@@ -1,1 +1,100 @@
-hurray!
+---
+layout: default
+---
+<br /><br>
+ <div class="container">
+ <!-- Carousel indicators -->
+    <div id = "myCarousel"  class="carousel slide" interval="2000">
+  <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active"> 
+                <img src = "/images/Chicago-Area-College-Saints-at-MWCT-2016.jpg"/ width="100%">
+            </div>
+
+             <div class="item">
+               <img src= "/images/SST-2016.jpg"/ width="100%">
+           </div>
+        </div>    
+      
+       <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+
+        <ol  class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          
+        </ol>
+    </div> 
+</div>  
+
+
+{% for post in paginator.posts %}
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-sm-8">
+        <div class="article">
+    
+
+           <h1><a href="{{ site.baseurl}}{{ post.url }}"></a></h1>
+              {% if site.comments and post.comments %}
+                  {% if site.disqus != '' %}
+                  <p class="author"><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread" data-disqus-identifier="{{ post.url | slugify }}">Comments</a></p>
+                  {% elsif site.isso != '' %}
+                  <p class="author"><a href="{{ site.baseurl }}{{ post.url }}{{ site.isso_suffix }}#isso-thread">Comments</a></p>
+              {% endif %}
+              {% endif %}
+         </div>  
+         
+
+
+       
+        <div class="content">
+            {{ post.content }}
+        </div>
+
+      </div>
+         <div class= "col-sm-4"><br>
+           <img src="/images/Read-His-Word.png" ><br><br>
+          <p style= "text-align: justify;">
+              May we esteem His word more than our apportioned food (Job 23:12) reading it consistently until it becomes our lasting inward nourishment (Jer. 15:16) and the light of our daily pathway (Psalms 119:105)<a target="_blank" href="http://www.readhisword.com/" title="Read his word" style="line-height: 0.5; color: #993366;text-decoration: underline">Redeem Your Time…</a>
+         </p>
+        </div>
+      
+       
+        <div class= "col-sm-4"><br>
+          <iframe frameborder="0" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/wrq5oTOYl8A" id="fitvid165462"></iframe>
+        </div> 
+    </div>     
+  </div>
+{% endfor %}<br><br><br><br><br>
+
+<div class="row">
+  <div class="col-sm-12">
+  
+ 
+     <div class="col-sm-4">
+          <h3 style="text-align: center;">Bible Study Tools</h3>
+          <center><img  src="/images/study.png"></center>
+          <p style="text-align: justify;">Get more out of your Bible reading! Our free online Bible study resources will help you read and study the Bible.</p>
+     </div>
+
+
+     <div class="col-sm-4">
+         <h3  style="text-align: center;">About This Bible</h3>
+         <center><img src="/images/nt.jpg"></center>
+         <p style="text-align: justify;">The study tools in the New Testament Recovery Version will help you understand the Bible in a deeper way.</p>
+     </div>
+
+     <div class="col-sm-4">
+        <h3 style="text-align: center;">Free Books</h3>
+        <center><img src="/images/books.png"></center>
+        <p style="text-align: justify;">Books by Watchman Nee and Witness Lee that help you progress in your Christian walk and grow in Christ.</p>
+     </div>
+   
+ </div>
+</div> 
+ 
+ 
+

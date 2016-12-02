@@ -1,0 +1,55 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    
+
+.copyright {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    color:#ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.sidebar h1 {
+    color: #ee4444;
+    font-size: 1.3em;
+}
+
+.sidebar a {
+    color: #428bca;
+}
+
+.sidebar li {
+    margin-top: .7em;
+    line-height: 1em;
+}
+
+.sidebar a:hover {
+    color:#ffff;
+}
+
+.container-left {
+    margin: 0 auto;
+}
+
+.well h1 {
+    color: #222;
+    font-size: 3.3em;
+}
+
+.author {
+    color: #ee4444;
+}
+
+.author a {
+    color: #ee4444;
+}
+p{
+    margin-bottom: 1.7em;
+}
